@@ -1,7 +1,7 @@
 :- use_module(library(readutil)). % read_file_to_string/3
 :- use_module(library(pcre)). % re_replace/4
 :- current_prolog_flag(argv, Args), ( (memberchk(silent, Args) ; memberchk('--silent', Args) ; memberchk('-s', Args))
-                                      -> assertz(silent(true)) ; assertz(silent(false)) ).
+                                      -> assertz(silent(true)) ; assertz(silent(true)) ).
 
 %Read Filename into string S and process it (S holds MeTTa code):
 load_metta_file(Filename, Results) :- load_metta_file(Filename, Results, '&self').
